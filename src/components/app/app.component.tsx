@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import Calculator from '../../pages/calculator.page';
+import Calculator from '../../pages/calculator/calculator.page';
 
 import './app.component.css';
 import '../../common/styles';
