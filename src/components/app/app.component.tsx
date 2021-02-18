@@ -1,6 +1,8 @@
 import React, { FC } from 'react'
-import Calculator from '../calculator/calculator.component';
+import Calculator from '../../pages/calculator.page';
+
 import './app.component.css';
+import '../../common/styles';
 
 const App:FC = () => {
     return (
