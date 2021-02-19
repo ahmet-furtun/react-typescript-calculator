@@ -27,6 +27,20 @@
 .result-screen {
   background-color: white;
   border: 1px solid black;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.equation {
+  font-size: 25px;
+  margin-left: 20px;
+}
+
+.result {
+  font-size: 50px;
+  margin-right: 50px;
 }
 
 .buttons-screen {
@@ -36,13 +50,13 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(5, 1fr);
-  grid-gap: 1px; 
+  grid-gap: 1px;
 }
 
 .item1 {
   grid-column: span 2;
   text-align: center;
-cursor: pointer;
+  cursor: pointer;
 
   display: flex;
   align-items: center;
@@ -83,42 +97,42 @@ cursor: pointer;
   background-color: #757575;
 }
 
-.item1.CE{
+.item1.CE {
   background-color: #111111;
 }
 
-.item2.DEL{
+.item2.DEL {
   background-color: #111111;
 }
 
-.item1.CE:hover{
+.item1.CE:hover {
   background-color: #212121;
 }
 
-.item2.DEL:hover{
+.item2.DEL:hover {
   background-color: #212121;
 }
-.item1.CE:active{
+.item1.CE:active {
   background-color: #313131;
 }
 
-.item2.DEL:active{
+.item2.DEL:active {
   background-color: #313131;
 }
 
-.item2.operator{
-  background-color: #F57F17;
+.item2.operator {
+  background-color: #f57f17;
 }
 
-.item2.operator:hover{
-  background-color: #F9A825;
+.item2.operator:hover {
+  background-color: #f9a825;
 }
 
-.item2.operator:active{
-  background-color: #FBC02D;
+.item2.operator:active {
+  background-color: #fbc02d;
 }
 
-.footer{
+.footer {
   position: fixed;
   left: 0;
   bottom: 0;

@@ -1,34 +1,33 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
+
 import "./calculator.page.css";
 
+import {
+  CalculatorKeys,
+  CalculatorKeysDataObject,
+} from "../../common/types/calculator.data";
+
 const Calculator: FC = () => {
+  const [equation, setEquation] = useState("0");
+  const [result, setResult] = useState("0");
+
   return (
     <div className="container">
       <div className="calculator-container">
-        <div className="result-screen"></div>
+        <div className="result-screen">
+          <div className="equation">{equation}</div>
+          <div className="result">{result}</div>
+        </div>
         <div className="buttons-screen">
-          <div className="item1 CE">C</div>
-          <div className="item2 DEL">DEL</div>
-          <div className="item2 operator">/</div>
-
-          <div className="item2 number">1</div>
-          <div className="item2 number">2</div>
-          <div className="item2 number">3</div>
-          <div className="item2 operator">*</div>
-
-          <div className="item2 number">4</div>
-          <div className="item2 number">5</div>
-          <div className="item2 number">6</div>
-          <div className="item2 operator">+</div>
-
-          <div className="item2 number">7</div>
-          <div className="item2 number">8</div>
-          <div className="item2 number">9</div>
-          <div className="item2 operator">-</div>
-
-          <div className="item1 number">0</div>
-          <div className="item2 number">.</div>
-          <div className="item2 operator">=</div>
+          {CalculatorKeysDataObject.map(
+            (item: CalculatorKeys, index: number) => {
+              return (
+                <div className={item.className} key={index}>
+                  {item.value}
+                </div>
+              );
+            }
+          )}
         </div>
       </div>
       <div className="footer">Simple Calculator</div>
