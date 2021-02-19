@@ -1,79 +1,68 @@
-.calculator-container {
+.container {
   height: 100vh;
+  background-color: lightsteelblue;
+
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.calculator {
-  width: 300px;
-  height: 450px;
-  border: 2px solid black;
+.calculator-container {
+  width: 350px;
+  height: 500px;
+  background-color: darkslategray;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-around;
+  display: grid;
+  grid-template-rows: 125px 375px;
 }
 
 .result-screen {
-  border: 2px solid black;
-  height: 110px;
-  width: 280px;
+  background-color: white;
 }
 
-.functionality-container {
-  border: 2px solid black;
-  height: 310px;
-  width: 280px;
+.buttons-screen {
+  background-color: grey;
+  color: white;
+
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+}
+
+.item1 {
+  grid-column: span 2;
+  text-align: center;
+  background-color: maroon;
+}
+
+.item2 {
+  grid-column: span 1;
+  text-align: center;
+  background-color: lime;
+}
+
+.item1.number{
+  background-color: #424242;
+  cursor: pointer;
 
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
 }
 
-.erase-container{
-    width: 260px;
-    height: 60px;
-    border: 2px solid black;
+.item2.number {
+  background-color: #424242;
+  cursor: pointer;
 
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.down-keys-container{
-    width: 260px;
-    height: 225px;
-    border: 2px solid black;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-around;
+.item1.number:hover{
+  background-color: #616161;
 }
 
-.number-container{
-    width: 196px;
-    height: 221px;
-    border: 1px solid black;
-}
-
-.operator-container{
-    width: 53px;
-    height: 221px;
-    border: 1px solid black;
-}
-
-.operator-container > span {
-    display: block;
-    padding: 10px;
-    background-color: lightslategrey;
-    text-align: center;
-    margin-top: 2px;
-    cursor: pointer;
-}
-
-.operator-container > span:hover {
-    background-color: rgb(166, 180, 194);
+.item2.number:hover{
+  background-color: #616161;
 }
