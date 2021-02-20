@@ -14,6 +14,7 @@ const Calculator: FC = () => {
   const [lastResult, setLastResult] = useState("0");
 
   const keyPress = (item: CalculatorKeys) => {
+    if(result !== '0') setResult('0');
     let isNum = /^\d+$/.test(item.value);
     let converter: number = 0;
     if (isNum || item.value === ".") {
